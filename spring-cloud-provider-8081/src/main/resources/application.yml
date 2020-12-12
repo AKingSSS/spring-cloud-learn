@@ -1,0 +1,17 @@
+server:
+  port: 8081
+# spring 配置
+spring:
+  application:
+    name: spring-cloud-provider-8081
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.227.11:3306/platform_xhcrm?characterEncoding=utf-8&useUnicode=true&allowMultiQueries=true&useSSL=false
+    username: *
+    password: *
+# mybatis 配置
+mybatis:
+  type-aliases-package: com.aking.cloud.pojo
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapping/*Mapper.xml
