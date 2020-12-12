@@ -23,7 +23,7 @@ eureka:
       # 单机
       # defaultZone: http://localhost:7001/eureka
       # eureka 集群
-      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+      defaultZone: http://eureka.7001.com:7001/eureka,http://eureka.7001.com:7002/eureka,http://eureka.7001.com:7003/eureka
     instance:
       instance-id: spring-cloud-provider-8081 # 修改 eureka 默认描述信息
 
