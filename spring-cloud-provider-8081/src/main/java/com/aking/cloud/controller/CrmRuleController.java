@@ -4,6 +4,7 @@ import com.aking.cloud.pojo.CrmRuleDO;
 import com.aking.cloud.service.CrmRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +28,8 @@ public class CrmRuleController {
         return crmRuleService.addRule(crmRuleDO);
     }
 
-    @GetMapping("/queryRuleById")
-    public CrmRuleDO queryRuleById(Long id) {
+    @GetMapping("/queryRuleById/{id}")
+    public CrmRuleDO queryRuleById(@PathVariable("id") Long id) {
         return crmRuleService.queryRuleById(id);
     }
 
