@@ -11,6 +11,9 @@
         <module>spring-cloud-api</module>
         <module>spring-cloud-provider-8081</module>
         <module>spring-cloud-customer-8082</module>
+        <module>spring-cloud-eureka-7001</module>
+        <module>spring-cloud-eureka-7002</module>
+        <module>spring-cloud-eureka-7003</module>
     </modules>
 
     <!--父文件打包方式 pom-->
