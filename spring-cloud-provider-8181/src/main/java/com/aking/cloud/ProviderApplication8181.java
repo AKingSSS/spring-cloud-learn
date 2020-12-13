@@ -17,8 +17,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @MapperScan("com.aking.cloud.dao")
 @EnableEurekaClient   // 在服务启动后自动注册到 eureka 服务中
-public class ProviderApplication {
+public class ProviderApplication8181 {
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class, args);
+        SpringApplication.run(ProviderApplication8181.class, args);
     }
 }

@@ -12,6 +12,18 @@
     <artifactId>spring-cloud-customer-8082</artifactId>
 
     <dependencies>
+        <!-- ribbon-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+        <!--Eureka-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
         <!-- 实体类+web-->
         <dependency>
             <groupId>com.aking</groupId>

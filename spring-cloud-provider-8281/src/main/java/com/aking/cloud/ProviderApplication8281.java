@@ -1,10 +1,9 @@
 package com.aking.cloud;
 
-import com.aking.myrule.CustomerRule;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * <p>
@@ -14,12 +13,12 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
  * @author yk
  * @date 2020/12/12
  */
+// 启动类
 @SpringBootApplication
-@EnableEurekaClient
-// 加载自定义的ribbon类
-@RibbonClient(name = "SPRING-CLOUD-PROVIDER-LEARN", configuration = CustomerRule.class)
-public class ConsumerApplication {
+@MapperScan("com.aking.cloud.dao")
+@EnableEurekaClient   // 在服务启动后自动注册到 eureka 服务中
+public class ProviderApplication8281 {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(ProviderApplication8281.class, args);
     }
 }
