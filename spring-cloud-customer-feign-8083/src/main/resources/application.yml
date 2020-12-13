@@ -1,0 +1,14 @@
+server:
+  port: 8083
+# eureka 服务注册
+eureka:
+  client:
+    service-url:
+      # 单机
+      # defaultZone: http://localhost:7001/eureka
+      # eureka 集群
+      defaultZone: http://eureka.7001.com:7001/eureka,http://eureka.7001.com:7002/eureka,http://eureka.7001.com:7003/eureka
+    instance:
+      instance-id: spring-cloud-consumer-8083 # 修改 eureka 默认描述信息
+    register-with-eureka: false # 不向 eureka 注册自己
+

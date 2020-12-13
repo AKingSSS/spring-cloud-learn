@@ -5,10 +5,7 @@ import com.aking.cloud.service.CrmRuleService;
 import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class CrmRuleController {
     private CrmRuleService crmRuleService;
 
     @PostMapping("/addRule")
-    public boolean addRule(CrmRuleDO crmRuleDO) {
+    public boolean addRule(@RequestBody CrmRuleDO crmRuleDO) {
         return crmRuleService.addRule(crmRuleDO);
     }
 

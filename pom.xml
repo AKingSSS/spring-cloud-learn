@@ -16,6 +16,7 @@
         <module>spring-cloud-eureka-7003</module>
         <module>spring-cloud-provider-8181</module>
         <module>spring-cloud-provider-8281</module>
+        <module>spring-cloud-customer-feign-8083</module>
     </modules>
 
     <!--父文件打包方式 pom-->
