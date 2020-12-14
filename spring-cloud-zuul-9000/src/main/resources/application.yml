@@ -1,0 +1,32 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: spring-cloud-zuul
+# eureka 服务注册
+eureka:
+  client:
+    service-url:
+      # 单机
+      # defaultZone: http://localhost:7001/eureka
+      # eureka 集群
+      defaultZone: http://eureka.7001.com:7001/eureka,http://eureka.7001.com:7002/eureka,http://eureka.7001.com:7003/eureka
+    instance:
+      instance-id: spring-cloud-zuul-9000 # 修改 eureka 默认描述信息
+      prefer-id-address: true
+
+# actuator info配置
+info:
+  app.name: aking-spring-cloud
+  company.name: www.aking.com   # zuul 项目域名
+
+# zuul 配置
+zuul:
+  routes:
+    crm:  # crm 代替  spring-cloud-provider-learn
+      serviceId: spring-cloud-provider-learn
+      path: /crm/**
+  ignored-services: spring-cloud-provider-learn # 不能使用该路径访问
+
+
