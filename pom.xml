@@ -17,6 +17,8 @@
         <module>spring-cloud-provider-8181</module>
         <module>spring-cloud-provider-8281</module>
         <module>spring-cloud-customer-feign-8083</module>
+        <module>spring-cloud-provider-hystrix-8381</module>
+        <module>spring-cloud-customer-hystrix-dashboard-8084</module>
     </modules>
 
     <!--父文件打包方式 pom-->

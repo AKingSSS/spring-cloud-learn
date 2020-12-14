@@ -18,7 +18,7 @@ import java.util.List;
  * @author yk
  * @date 2020/12/11
  */
-@FeignClient(value = "SPRING-CLOUD-PROVIDER-LEARN")
+@FeignClient(value = "SPRING-CLOUD-PROVIDER-LEARN", fallbackFactory = CrmRuleServiceFallbackFactory.class)
 @Component
 public interface CrmRuleService {
     /**
