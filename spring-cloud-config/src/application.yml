@@ -9,6 +9,6 @@ spring:
     name: spring-cloud-config-dev
 ---
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: spring-cloud-config-test
