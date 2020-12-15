@@ -1,0 +1,17 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git: # 连接远程仓库
+          uri: https://github.com/AKingSSS/spring-cloud-learn.git   # 注意是 uri，不是url
+          searchPaths: /spring-cloud-config/src/           #配置文件目录
+          force-pull: true
+          label: master  # 分支
+
+# http://localhost:3344/master/config-client-dev.yml
+
