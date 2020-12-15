@@ -20,6 +20,9 @@
         <module>spring-cloud-provider-hystrix-8381</module>
         <module>spring-cloud-customer-hystrix-dashboard-8084</module>
         <module>spring-cloud-zuul-9000</module>
+        <module>spring-cloud-config-server-3344</module>
+        <module>spring-cloud-config-client</module>
+        <module>spring-cloud-eureka-config-7001</module>
     </modules>
 
     <!--父文件打包方式 pom-->
